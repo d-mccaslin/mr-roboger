@@ -9,7 +9,10 @@ $(document).ready(function() {
 
     if (number) {
       const numberRange = returnRangeOfNumbers(number);
-      const outputRange = replaceAll(numberRange, name);
+      let outputRange = replaceAll(numberRange);
+      if (name) {
+        addName(outputRange, name);
+      }
       console.log(outputRange);
       $("#response").show();
       $("ul#result").prepend("<li>" + outputRange + "</li>");
@@ -19,15 +22,13 @@ $(document).ready(function() {
 
 // Business logic
 
-function replaceAll(numberArray, name) {
-  // const originalArray = numberArray;
-  replaceThirtyTwo(numberArray, name);
+function replaceAll(numberArray) {
+  replaceThirtyTwo(numberArray);
   replaceTwentyOne(numberArray);
-  replaceThirteen(numberArray, name);
-  replaceThree(numberArray, name);
+  replaceThirteen(numberArray);
+  replaceThree(numberArray);
   replaceTwo(numberArray);
   replaceOne(numberArray);
-  //console.log(numberArray);
   return numberArray;
 }
 
@@ -59,21 +60,21 @@ function replaceTwo(numberArray) {
   // return numberArray;
 }
 
-function replaceThree(numberArray, name) {
+function replaceThree(numberArray) {
   for (let i = 0; i < numberArray.length; i++) {
     let targetNumber = numberArray[i];
     if (targetNumber.toString().indexOf('3') > -1) {
-      numberArray[i] = "Won't you be my neighbor, " + name + "?";
+      numberArray[i] = "Won't you be my neighbor?";
     }
   }
   // return numberArray;
 }
 
-function replaceThirteen(numberArray, name) {
+function replaceThirteen(numberArray) {
   for (let i = 0; i < numberArray.length; i++) {
     let targetNumber = numberArray[i];
     if (targetNumber.toString().indexOf('13') > -1) {
-      numberArray[i] = "Won't you be my neighbor, " + name + "? (THIRTEEN)";
+      numberArray[i] = "Won't you be my neighbor? (THIRTEEN)";
     }
   }
   // return numberArray;
@@ -89,11 +90,11 @@ function replaceTwentyOne(numberArray) {
   // return numberArray;
 }
 
-function replaceThirtyTwo(numberArray, name) {
+function replaceThirtyTwo(numberArray) {
   for (let i = 0; i < numberArray.length; i++) {
     let targetNumber = numberArray[i];
     if (targetNumber.toString().indexOf('32') > -1) {
-      numberArray[i] = "Won't you be my neighbor, " + name + "? (THIRTY TWO)"
+      numberArray[i] = "Won't you be my neighbor? (THIRTY TWO)"
     }
   }
   // return numberArray;
@@ -109,13 +110,12 @@ function addName(numberArray, name) {
   }
 }
 
-
-
 /* To do
 
-- test/fix functions for numbers 100+
 - check input(s)
 - make name optional
+- additional / fun styling stuff
+- tweak outputs to remove testing text
 
 Questions
 
