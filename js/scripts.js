@@ -53,7 +53,35 @@ function replaceThree(numberArray) {
   return numberArray;
 }
 
+function replaceThirteen(numberArray) {
+  for (let i = 0; i < numberArray.length; i++) {
+    let targetNumber = numberArray[i];
+    if (targetNumber.toString().indexOf('13') > -1) {
+      numberArray[i] = "Won't you be my neighbor? (13) ";
+    }
+  }
+}
+
+function replaceTwentyOne(numberArray) {
+  for (let i = 0; i < numberArray.length; i++) {
+    let targetNumber = numberArray[i];
+    if (targetNumber.toString().indexOf('21') > -1) {
+      numberArray[i] = "Boop (21) ";
+    }
+  }
+}
+
+function replaceThirtyTwo(numberArray) {
+  for (let i = 0; i < numberArray.length; i++) {
+    let targetNumber = numberArray[i];
+    if (targetNumber.toString().indexOf('32') > -1) {
+      numberArray[i] = "Won't you be my neighbor? (32) "
+    }
+  }
+}
+
 function replaceAll(numberArray) {
+  const originalArray = numberArray;
   replaceThree(numberArray);
   replaceTwo(numberArray);
   replaceOne(numberArray);
