@@ -11,8 +11,18 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 ## Specs
 
 * Spec: The program returns a range of numbers from 0 to the inputted number
-    * Input:
-    * Output: 
+    * Input: 5
+    * Output: 0, 1, 2, 3, 4, 5
+* Spec: Numbers that contain a "1" will have all digits replaced with <em>"Beep!"</em>
+    * Input: 3
+    * Output: 0, "Beep!", 2, 3
+* Spec: Numbers that contain a "2" will have all digits replaced with <em>"Boop!"</em>
+    * Input: 3
+    * Output: 0, 1, "Boop!", 3
+* Spec: Numbers that contain a "3" will have all digits replaced with "Won't you be my neighbor?"
+    * Input: 3
+    * Output: 0, 1, 2, "Won't you be my neighbor?"
+* More specs to follow...
 
 ## Tests
 
