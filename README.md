@@ -32,7 +32,8 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
     * <strong>Input:</strong> 35
     * <strong>Output:</strong> 0, 1, 2 ... 30, 31, "Won't you be my neighbor?", 33, 34, 35
 * <strong>Spec: </strong> In the case of numbers with 3 digits or more, the converted numbers must continue to follow the above rules based on precedents specified. Rules 2 through 7 above take precedent over each other in <strong>reverse</strong> order.
-
+    * <strong>Input:</strong> 1321
+    * <strong>Output:</strong> .... "Boop" ...
 
 ## Tests
 
