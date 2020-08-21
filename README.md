@@ -22,7 +22,16 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 * <strong>Spec:</strong> Numbers that contain a "3" will have all digits replaced with "Won't you be my neighbor?"
     * <strong>Input:</strong> 3
     * <strong>Output:</strong> 0, 1, 2, "Won't you be my neighbor?"
-* More specs to follow...
+* <strong>Spec:</strong> The number 13 should be replaced with "Won't you be my neighbor?"
+    * <strong>Input:</strong> 15
+    * <strong>Output:</strong> 0, 1, 2 ... 11, 12, "Won't you be my neighbor?", 14, 15
+* <strong>Spec: </strong> The number 21 should be replaced with "Boop". The rule takes precent over the previous rule.
+    * <strong>Input:</strong> 25
+    * <strong>Output:</strong> 0, 1, 2 ... 19, 20, "Boop", 22, 23, 24, 25
+* <strong>Spec: </strong> The number 32 should be replaced with "Won't you be my neighbor?"
+    * <strong>Input:</strong> 35
+    * <strong>Output:</strong> 0, 1, 2 ... 30, 31, "Won't you be my neighbor?", 33, 34, 35
+
 
 ## Tests
 
