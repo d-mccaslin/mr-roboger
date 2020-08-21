@@ -43,7 +43,7 @@ function replaceOne(numberArray) {
       numberArray[i] = "Beep!";
     }
   }
-  return numberArray;
+  // return numberArray;
 }
 
 function replaceTwo(numberArray) {
@@ -53,7 +53,7 @@ function replaceTwo(numberArray) {
       numberArray[i] = "Boop!";
     }
   }
-  return numberArray;
+  // return numberArray;
 }
 
 function replaceThree(numberArray) {
@@ -63,7 +63,7 @@ function replaceThree(numberArray) {
       numberArray[i] = "Won't you be my neighbor?";
     }
   }
-  return numberArray;
+  // return numberArray;
 }
 
 function replaceThirteen(numberArray) {
@@ -73,7 +73,7 @@ function replaceThirteen(numberArray) {
       numberArray[i] = "Won't you be my neighbor? (THIRTEEN) ";
     }
   }
-  return numberArray;
+  // return numberArray;
 }
 
 function replaceTwentyOne(numberArray) {
@@ -83,7 +83,7 @@ function replaceTwentyOne(numberArray) {
       numberArray[i] = "Boop (TWENTY ONE) ";
     }
   }
-  return numberArray;
+  // return numberArray;
 }
 
 function replaceThirtyTwo(numberArray) {
@@ -93,7 +93,7 @@ function replaceThirtyTwo(numberArray) {
       numberArray[i] = "Won't you be my neighbor? (THIRTY TWO) "
     }
   }
-  return numberArray;
+  // return numberArray;
 }
 
 
