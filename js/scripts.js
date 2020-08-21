@@ -9,6 +9,7 @@ $(document).ready(function() {
     const outputRange = replaceAll(numberRange);
     
     console.log(outputRange);
+    $("#result").text(outputRange);
   })
 })
 
@@ -58,3 +59,13 @@ function replaceAll(numberArray) {
   replaceThree(numberArray);
   return numberArray;
 }
+
+
+
+
+
+/* To do
+
+- convert html output to ul
+
+*/
