@@ -8,3 +8,7 @@
 #response {
   display: none;
 }
+
+#response li {
+  padding: 10px;
+}
