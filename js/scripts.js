@@ -54,9 +54,9 @@ function replaceThree(numberArray) {
 }
 
 function replaceAll(numberArray) {
-  replaceOne(numberArray);
-  replaceTwo(numberArray);
   replaceThree(numberArray);
+  replaceTwo(numberArray);
+  replaceOne(numberArray);
   return numberArray;
 }
 
