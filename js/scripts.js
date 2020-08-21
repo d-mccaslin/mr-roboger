@@ -11,7 +11,7 @@ $(document).ready(function() {
     
     console.log(outputRange);
     $("#response").show();
-    $("#result").text(outputRange);
+    $("ul#result").prepend("<li>" + outputRange + "</li>");
   })
 })
 
@@ -97,11 +97,22 @@ function replaceThirtyTwo(numberArray, name) {
   // return numberArray;
 }
 
+function addName(numberArray, name) {
+  for (let i = 0; i < numberArray.length; i++) {
+    let targetString = numberArray[i];
+    if (targetString.toString().indexOf('neighbor') > -1) {
+      const ind1 = targetString.indexOf("?");
+      const ind2 = ind1 + 1;
+      numberArray[i] = targetString.slice(0,ind1) + ", " + name + targetString.slice(ind1,targetString.length);
+    }
+  }
+}
+
 
 
 /* To do
 
-- convert html output to ul
+- test/fix functions for numbers 100+
 - check input(s)
 - make name optional
 
