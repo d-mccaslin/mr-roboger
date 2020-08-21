@@ -9,6 +9,7 @@ $(document).ready(function() {
     const outputRange = replaceAll(numberRange);
     
     console.log(outputRange);
+    $("#response").show();
     $("#result").text(outputRange);
   })
 })
