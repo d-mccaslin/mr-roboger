@@ -112,8 +112,6 @@ function addName(numberArray, name) {
 
 /* To do
 
-- check input(s)
-- make name optional
 - additional / fun styling stuff
 - tweak outputs to remove testing text
 
