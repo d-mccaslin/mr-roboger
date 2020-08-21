@@ -6,12 +6,14 @@ $(document).ready(function() {
     const number = parseInt($("input#numberInput").val());
     const name = $("input#nameInput").val();
     // console.log(number);
-    const numberRange = returnRangeOfNumbers(number);
-    const outputRange = replaceAll(numberRange, name);
-    
-    console.log(outputRange);
-    $("#response").show();
-    $("ul#result").prepend("<li>" + outputRange + "</li>");
+
+    if (number) {
+      const numberRange = returnRangeOfNumbers(number);
+      const outputRange = replaceAll(numberRange, name);
+      console.log(outputRange);
+      $("#response").show();
+      $("ul#result").prepend("<li>" + outputRange + "</li>");
+    }
   })
 })
 
@@ -102,7 +104,6 @@ function addName(numberArray, name) {
     let targetString = numberArray[i];
     if (targetString.toString().indexOf('neighbor') > -1) {
       const ind1 = targetString.indexOf("?");
-      const ind2 = ind1 + 1;
       numberArray[i] = targetString.slice(0,ind1) + ", " + name + targetString.slice(ind1,targetString.length);
     }
   }
