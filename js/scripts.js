@@ -16,6 +16,18 @@ $(document).ready(function() {
 
 // Business logic
 
+function replaceAll(numberArray) {
+  // const originalArray = numberArray;
+  replaceThirtyTwo(numberArray);
+  replaceTwentyOne(numberArray);
+  replaceThirteen(numberArray);
+  replaceThree(numberArray);
+  replaceTwo(numberArray);
+  replaceOne(numberArray);
+  //console.log(numberArray);
+  return numberArray;
+}
+
 function returnRangeOfNumbers(number) {
   let numberArray = [];
   for (let i = 0; i <= number; i++) {
@@ -58,43 +70,43 @@ function replaceThirteen(numberArray) {
   for (let i = 0; i < numberArray.length; i++) {
     let targetNumber = numberArray[i];
     if (targetNumber.toString().indexOf('13') > -1) {
-      numberArray[i] = "Won't you be my neighbor? (13) ";
+      numberArray[i] = "Won't you be my neighbor? (THIRTEEN) ";
     }
   }
+  return numberArray;
 }
 
 function replaceTwentyOne(numberArray) {
   for (let i = 0; i < numberArray.length; i++) {
     let targetNumber = numberArray[i];
     if (targetNumber.toString().indexOf('21') > -1) {
-      numberArray[i] = "Boop (21) ";
+      numberArray[i] = "Boop (TWENTY ONE) ";
     }
   }
+  return numberArray;
 }
 
 function replaceThirtyTwo(numberArray) {
   for (let i = 0; i < numberArray.length; i++) {
     let targetNumber = numberArray[i];
     if (targetNumber.toString().indexOf('32') > -1) {
-      numberArray[i] = "Won't you be my neighbor? (32) "
+      numberArray[i] = "Won't you be my neighbor? (THIRTY TWO) "
     }
   }
-}
-
-function replaceAll(numberArray) {
-  const originalArray = numberArray;
-  replaceThree(numberArray);
-  replaceTwo(numberArray);
-  replaceOne(numberArray);
   return numberArray;
 }
-
-
 
 
 
 /* To do
 
 - convert html output to ul
+- check input(s)
+- include a "name" input
+
+Questions
+
+- is return necessary on replace methods?
+- Do spec input/ouputs need to be cumulative with previous rules?
 
 */
