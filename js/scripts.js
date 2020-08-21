@@ -6,7 +6,8 @@ $(document).ready(function() {
     const number = parseInt($("input#numberInput").val());
     // console.log(number);
     const numberRange = returnRangeOfNumbers(number);
-    const outputRange = replaceOne(numberRange);
+    const outputRange = replaceAll(numberRange);
+    
     console.log(outputRange);
   })
 })
@@ -32,10 +33,28 @@ function replaceOne(numberArray) {
 }
 
 function replaceTwo(numberArray) {
-  return number;
+  for (let i = 0; i < numberArray.length; i++) {
+    let targetNumber = numberArray[i];
+    if (targetNumber.toString().indexOf('2') > -1) {
+      numberArray[i] = "Boop!";
+    }
+  }
+  return numberArray;
 }
 
 function replaceThree(numberArray) {
-  return number;
+  for (let i = 0; i < numberArray.length; i++) {
+    let targetNumber = numberArray[i];
+    if (targetNumber.toString().indexOf('3') > -1) {
+      numberArray[i] = "Won't you be my neighbor?";
+    }
+  }
+  return numberArray;
 }
 
+function replaceAll(numberArray) {
+  replaceOne(numberArray);
+  replaceTwo(numberArray);
+  replaceThree(numberArray);
+  return numberArray;
+}
