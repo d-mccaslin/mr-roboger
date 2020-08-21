@@ -4,9 +4,10 @@ $(document).ready(function() {
   $("form#formMain").submit(function(event) {
     event.preventDefault();
     const number = parseInt($("input#numberInput").val());
+    const name = $("input#nameInput").val();
     // console.log(number);
     const numberRange = returnRangeOfNumbers(number);
-    const outputRange = replaceAll(numberRange);
+    const outputRange = replaceAll(numberRange, name);
     
     console.log(outputRange);
     $("#response").show();
@@ -16,12 +17,12 @@ $(document).ready(function() {
 
 // Business logic
 
-function replaceAll(numberArray) {
+function replaceAll(numberArray, name) {
   // const originalArray = numberArray;
-  replaceThirtyTwo(numberArray);
+  replaceThirtyTwo(numberArray, name);
   replaceTwentyOne(numberArray);
-  replaceThirteen(numberArray);
-  replaceThree(numberArray);
+  replaceThirteen(numberArray, name);
+  replaceThree(numberArray, name);
   replaceTwo(numberArray);
   replaceOne(numberArray);
   //console.log(numberArray);
@@ -56,21 +57,21 @@ function replaceTwo(numberArray) {
   // return numberArray;
 }
 
-function replaceThree(numberArray) {
+function replaceThree(numberArray, name) {
   for (let i = 0; i < numberArray.length; i++) {
     let targetNumber = numberArray[i];
     if (targetNumber.toString().indexOf('3') > -1) {
-      numberArray[i] = "Won't you be my neighbor?";
+      numberArray[i] = "Won't you be my neighbor, " + name + "?";
     }
   }
   // return numberArray;
 }
 
-function replaceThirteen(numberArray) {
+function replaceThirteen(numberArray, name) {
   for (let i = 0; i < numberArray.length; i++) {
     let targetNumber = numberArray[i];
     if (targetNumber.toString().indexOf('13') > -1) {
-      numberArray[i] = "Won't you be my neighbor? (THIRTEEN) ";
+      numberArray[i] = "Won't you be my neighbor, " + name + "? (THIRTEEN)";
     }
   }
   // return numberArray;
@@ -80,17 +81,17 @@ function replaceTwentyOne(numberArray) {
   for (let i = 0; i < numberArray.length; i++) {
     let targetNumber = numberArray[i];
     if (targetNumber.toString().indexOf('21') > -1) {
-      numberArray[i] = "Boop (TWENTY ONE) ";
+      numberArray[i] = "Boop (TWENTY ONE)";
     }
   }
   // return numberArray;
 }
 
-function replaceThirtyTwo(numberArray) {
+function replaceThirtyTwo(numberArray, name) {
   for (let i = 0; i < numberArray.length; i++) {
     let targetNumber = numberArray[i];
     if (targetNumber.toString().indexOf('32') > -1) {
-      numberArray[i] = "Won't you be my neighbor? (THIRTY TWO) "
+      numberArray[i] = "Won't you be my neighbor, " + name + "? (THIRTY TWO)"
     }
   }
   // return numberArray;
@@ -102,7 +103,7 @@ function replaceThirtyTwo(numberArray) {
 
 - convert html output to ul
 - check input(s)
-- include a "name" input
+- make name optional
 
 Questions
 
